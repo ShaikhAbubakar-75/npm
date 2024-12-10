@@ -1,9 +1,17 @@
-import axios from "axios"
+import quotesy from 'quotesy'
 
-axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    .then((response) => { console.log(response.data) })
-    .catch(error => console.error(error))
+const randomQuote = quotesy.random();
 
-setTimeout(() => {
-    console.log(2 * 5)
-}, 3000)
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteElement = document.getElementById('quote');
+    quoteElement.innerHTML = `
+      <blockquote>${randomQuote.text}</blockquote>
+      <p>- ${randomQuote.author}</p>
+    `;
+});
+
+const quoteCard = document.getElementById('quote-card')
+
+quoteCard.addEventListener('click', () => {
+    location.reload()
+})
