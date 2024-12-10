@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298,
+    #ff7f50,
+    #6a5acd,
+    #32cd32,
+    #ff4500
+  );
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}
+
+#quote-card {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border with transparency */
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  backdrop-filter: blur(10px); /* Blur effect for glassy look */
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#quote-card:hover {
+  transform: scale(1.05); /* Subtle zoom-in effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+#quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #f0f0f0; /* Light text color */
+  margin: 0 0 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .quote-card {
+    padding: 15px;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .quote-author {
+    font-size: 0.9rem;
+  }
+}
